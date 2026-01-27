@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria - TRIO Ecommerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/WpMKLJw9/Logo.jpg">
+</head>
+
+<body>
+
+    <script>
+        function mostrarEmail(elemento) {
+            const email = "contato@trioecommerce.com.br";
+
+            // 1. Troca o texto para o e-mail
+            elemento.innerHTML = email;
+
+            // 2. Transforma o link em um link de envio de e-mail
+            elemento.href = "mailto:" + email;
+
+            // 3. Estética
+            elemento.style.color = "#e2e600";
+            elemento.style.fontWeight = "bold";
+
+            // Remove o atributo onclick para que o link funcione normalmente no segundo clique
+            elemento.removeAttribute("onclick");
+        }
+    </script>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="https://i.ibb.co/ZRdNqPVv/Inserir-um-pouquinho-de-texto-1-removebg-preview.png"
+                    alt="TRIO Ecommerce Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="https://www.mercadolivre.com.br/pagina/trio_ecommerce#from=share_eshop">Loja</a>
+                <a href="javascript:void(0)" onclick="mostrarEmail(this)"
+                    style="display: inline-block; max-width: 100%; word-break: break-all;">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="categoria-container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> / Categoria
+        </div>
+
+        <h1>TRIO Ecommerce</h1>
+        <p class="subtitulo">Tipo de produtos</p>
+
+        <div class="filtros">
+            <button class="filtro-btn ativo" data-categoria="beleza">Beleza</button>
+            <button class="filtro-btn" data-categoria="cozinha">Cozinha</button>
+            <button class="filtro-btn" data-categoria="construcao">Construção</button>
+        </div>
+    </section>
+
+    <div class="header-produtos">
+        <h2>Produtos</h2>
+    </div>
+
+    <div class="produtos">
+
+        <div class="produto" data-categoria="beleza">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/escova-secadora-cadence-to-pront-4-em-1/up/MLBU3748265304?pdp_filters=item_id%3AMLB6185189672#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6185189672"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_740506-MLA99588742918_122025-F.webp"
+                            alt="Escova Secadora Cadence">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Escova Secadora Cadence To Pront@ 4 Em 1 Azul-claro 127/220v
+                        </h3>
+
+                        <p class="preco">R$ 135,18</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 13,36</strong>
+                        </p>
+
+                        <span class="cupom">5% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto" data-categoria="beleza">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/escova-secadora-mondial-keratin-white-rose-1200w/up/MLBU3748322948?pdp_filters=item_id%3AMLB6185165624#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6185165624"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_856835-MLA100007840721_122025-F.webp"
+                            alt="Produto 2">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Escova Secadora Mondial Keratin White Rose 1200w Rosa 127/220v
+                        </h3>
+
+                        <p class="preco">R$ 147,06</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 14,53</strong>
+                        </p>
+
+                        <span class="cupom">5% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/fritadeira-airfryer-quad-fry-42-litros-1400w-preta-elgin/up/MLBU3739119069?pdp_filters=item_id%3AMLB6185109530#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6185109530"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_813389-MLA99520090726_112025-F.webp"
+                            alt="Fritadeira Elétrica">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Fritadeira Airfryer Quad Fry 4,2 Litros 1.400w Preta Elgin Preto 127v
+                        </h3>
+
+                        <p class="preco">R$ 273,90</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 26,79</strong>
+                        </p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/fervedor-125-l-revestimento-proflon-antiaderente-preto/up/MLBU3739328813?pdp_filters=item_id%3AMLB6185154980#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6185154980"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_806040-MLA99614359898_122025-F.webp"
+                            alt="Fervedor">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Fervedor 1,25 L Revestimento Pro-flon Antiaderente Preto
+                        </h3>
+
+                        <p class="preco">R$ 48,90</p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/cacarola-com-tampa-brinox-topazio-20cm-23l-cinza/p/MLB54151735?pdp_filters=item_id%3AMLB6086850806#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6086850806"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_745464-MLA90890469338_082025-F.webp"
+                            alt="Caçarola Com Tampa">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Caçarola Com Tampa Brinox Topázio 20cm 2,3l Cinza
+                        </h3>
+
+                        <p class="preco">R$ 95</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 9,36</strong>
+                        </p>
+
+                        <span class="cupom">10% OFF Levando 4 unidades</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/kit-brinox-fervedor-antiaderente-cinza-125l--cacarola-com-tampa-cinza-20cm-23l/up/MLBU3705266222?pdp_filters=item_id%3AMLB6106587750#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6106587750"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_630548-MLB102995284025_122025-F.webp"
+                            alt="Kit Brinox">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Kit Brinox: Fervedor Antiaderente Cinza 1,25l + Caçarola Com Tampa Cinza 20cm 2,3l
+                        </h3>
+
+                        <p class="preco">R$ 134,57</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 13,30</strong>
+                        </p>
+
+                        <span class="cupom">7% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/panela-de-pressao-ceramic-life-vapt-brinox-antiad-45-lit/up/MLBU3739063931?pdp_filters=item_id%3AMLB6185042764#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6185042764"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_951409-MLB99149156304_112025-F.webp"
+                            alt="Panela Verde">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Panela De Pressão Ceramic Life Vapt Brinox Antiad 4,5 Lit Verde
+                        </h3>
+
+                        <p class="preco">R$ 168</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 16,60</strong>
+                        </p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/kit-brinox-fervedor-proflon-antiaderente-125l-cinza--panela-de-pressao-45l-verde--cacarola-com-tampa-20cm-23l/up/MLBU3696708781?pdp_filters=item_id%3AMLB6106662846#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6106662846"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_796898-MLB102995450229_122025-F.webp"
+                            alt="Kit Brinox 2">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Kit Brinox: Fervedor Pro-flon Antiaderente 1,25l Cinza + Panela De Pressão 4,5l Verde +
+                            Caçarola Com Tampa 20cm 2,3l
+                        </h3>
+
+                        <p class="preco">R$ 270,26</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 26,44</strong>
+                        </p>
+
+                        <span class="cupom">15% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/panela-de-pressao-ceramic-life-vapt-20cm-45l-vanilla-brinox/up/MLBU3738884985?pdp_filters=item_id%3AMLB4432415737#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4432415737"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_757218-MLA95669870440_102025-F.webp"
+                            alt="Panela Vanilla">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Panela De Pressão Cerâmic Life Vapt 20cm 4,5l Vanilla Brinox Bege
+                        </h3>
+
+                        <p class="preco">R$ 175,90</p>
+
+                        <p class="parcelamento"> em <strong>12x 17,38</strong></p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/kit-brinox-panela-de-pressao-ceramic-life-vapt-20cm-45l-vanilla--panela-de-pressao-42l-verde/up/MLBU3688529330?pdp_filters=item_id%3AMLB4371092487#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4371092487"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_637640-MLB101683687099_122025-F.webp"
+                            alt="Kit Brinox 3">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Kit Brinox: Panela De Pressão Cerâmic Life Vapt 20cm 4,5l Vanilla + Panela De Pressão 4,2l
+                            Verde
+                        </h3>
+
+                        <p class="preco">R$ 308,52</p>
+
+                        <p class="parcelamento">
+                            em <strong>6x 51,42</strong>
+                        </p>
+
+                        <span class="cupom">15% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/kit-brinox-pipoqueira-graphite-42l--panela-de-pressao-ceramica-cinza-20cm-45l/up/MLBU3696714647?pdp_filters=item_id%3AMLB6106663254#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6106663254"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_804828-MLB102995920223_122025-F.webp"
+                            alt="Kit Brinox 2">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Kit Brinox: Pipoqueira Graphite 4,2l + Panela De Pressão Cerâmica Cinza 20cm 4,5l
+                        </h3>
+
+                        <p class="preco">R$ 224,45</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 22,22</strong>
+                        </p>
+
+                        <span class="cupom">31% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/panela-de-pressao-brinox-ceramic-life-vapt-cinza/up/MLBU3748071250?pdp_filters=item_id%3AMLB6184989090#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6184989090"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_768227-MLA95404825388_102025-F.webp"
+                            alt="Panela Pressão Padrão">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Panela De Pressão Brinox Ceramic Life Vapt Cinza Cinza
+                        </h3>
+
+                        <p class="preco">R$ 179</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 17,69</strong>
+                        </p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/kit-cozinha-fritadeira-air-fryer-42l-1400w-preta--panela-de-pressao-ceramic-20cm-45l-vanilla/up/MLBU3680200425?pdp_filters=item_id%3AMLB6069299742#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6069299742"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_904028-MLB101183302200_122025-F.webp"
+                            alt="Kit cozinha">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Kit Cozinha: Fritadeira Air Fryer 4,2l 1400w Preta + Panela De Pressão Cerâmic 20cm 4,5l
+                            Vanilla
+                        </h3>
+
+                        <p class="preco">R$ 358,05</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 35,03</strong>
+                        </p>
+
+                        <span class="cupom">19% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/pipoqueira-pic-poc-42l-graphite-facil-e-rapida--brinox/up/MLBU3687454309?pdp_filters=item_id%3AMLB4381876885#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4381876885"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_855687-MLB102176004097_122025-F.webp"
+                            alt="Pipoqueira">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Pipoqueira Pic Poc 4,2l Graphite Fácil E Rápida - Brinox Graphite
+                        </h3>
+
+                        <p class="preco">R$ 130,95</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 12,94</strong>
+                        </p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto-vegetal-pronto-uso-sogia/p/MLB2054922001?pdp_filters=item_id%3AMLB4288242755#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4288242755"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_860557-MLB96770738928_112025-F.webp"
+                            alt="Desmoldante">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto Vegetal Pronto Uso - Sogia
+                        </h3>
+
+                        <p class="preco">R$ 46,38</p>
+
+                        <span class="cupom">30% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto/p/MLB2059635418?pdp_filters=item_id%3AMLB6159823710#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6159823710"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_746224-MLB96759619012_112025-F.webp"
+                            alt="Desmoldante Para Concreto">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto
+                        </h3>
+
+                        <p class="preco">R$ 188,81</p>
+
+                        <p class="parcelamento">
+                            preço por litro: R$ 18,88
+                        </p>
+
+                        <span class="cupom">7% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto-vegetal-pronto-uso-sogia/p/MLB2059351420?pdp_filters=item_id%3AMLB4288318177#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4288318177"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_750852-MLB96769458772_112025-F.webp"
+                            alt="Kit Desmoldante">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto Vegetal Pronto Uso Sogia
+                        </h3>
+
+                        <p class="preco">R$ 88,31</p>
+
+                        <p class="parcelamento">
+                            em <strong>3x 29,44</strong>
+                        </p>
+
+                        <span class="cupom">33% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-concreto-vegetal-pronto-uso/up/MLBU3533002059?pdp_filters=item_id%3AMLB5896192544#origin%3Dshare%26sid%3Dshare%26wid%3DMLB5896192544"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_827014-MLB96756363476_112025-F.webp"
+                            alt="Kit Brinox 2">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Concreto Vegetal Pronto Uso
+                        </h3>
+
+                        <p class="preco">R$ 119</p>
+
+                        <p class="parcelamento">
+                            em <strong>4x 29,75</strong>
+                        </p>
+
+                        <span class="cupom">10% OFF levando 4 unidades</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <script>
+        const botoes = document.querySelectorAll('.filtro-btn');
+        const produtos = document.querySelectorAll('.produto');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                // Remove ativo de todos
+                botoes.forEach(b => b.classList.remove('ativo'));
+                botao.classList.add('ativo');
+
+                const categoria = botao.dataset.categoria;
+
+                produtos.forEach(produto => {
+                    if (produto.dataset.categoria === categoria) {
+                        produto.classList.remove('hidden');
+                    } else {
+                        produto.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+    <footer class="footer">
+        <p>© 2026 TrioEcommerce — Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>

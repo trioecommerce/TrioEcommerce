@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIO Ecommerce</title>
+
+    <!-- LINK DO CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/WpMKLJw9/Logo.jpg">
+</head>
+
+<body>
+
+    <script>
+        function mostrarEmail(elemento) {
+            const email = "contato@trioecommerce.com.br";
+
+            // 1. Troca o texto para o e-mail
+            elemento.innerHTML = email;
+
+            // 2. Transforma o link em um link de envio de e-mail
+            elemento.href = "mailto:" + email;
+
+            // 3. Estética
+            elemento.style.color = "#e2e600";
+            elemento.style.fontWeight = "bold";
+
+            // Remove o atributo onclick para que o link funcione normalmente no segundo clique
+            elemento.removeAttribute("onclick");
+        }
+    </script>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="https://i.ibb.co/ZRdNqPVv/Inserir-um-pouquinho-de-texto-1-removebg-preview.png"
+                    alt="TRIO Ecommerce Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="categoria.html">Categoria</a>
+                <a href="#sobre">Sobre</a>
+                <a href="javascript:void(0)" onclick="mostrarEmail(this)"
+                    style="display: inline-block; max-width: 100%; word-break: break-all;">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+        </div>
+    </section>
+
+    <section class="prudut">
+        <a href="https://www.mercadolivre.com.br/pagina/trio_ecommerce" class="btn btn-primary">Ver Produtos</a>
+    </section>
+    <br>
+    <div class="anuncio-campanha">
+        <a href="javascript:void(0)" onclick="alternarProdutos()">
+            <img src="https://i.ibb.co/3mTCHX25/Captura-de-tela-2026-01-16-144954.png" alt="Campanha Cozinha"
+                class="img-anuncio">
+        </a>
+    </div>
+
+    <section id="secao-produtos" class="produtos-ocultos">
+        <h2>Promoção</h2>
+
+        <div class="produtos">
+
+            <div class="produto" data-categoria="cozinha">
+                <div class="card-produto">
+                    <a href="https://www.mercadolivre.com.br/fervedor-125-l-revestimento-pro-flon-antiaderente-cinza/p/MLB38995247?pdp_filters=item_id%3AMLB6086837532#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6086837532"
+                        class="link-total-card">
+                        <div class="card-img">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_806040-MLA99614359898_122025-F.webp"
+                                alt="Fervedor">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="titulo-produto">
+                                Fervedor 1,25 L Revestimento Pro-flon Antiaderente Cinza
+                            </h3>
+
+                            <p class="preco">R$ 51,04</p>
+
+                            <span class="cupom">10% OFF Levando 4 unidades</span>
+
+                            <p class="frete">
+                                Frete grátis <span>em compras acima de R$79,00</span>
+                            </p>
+                            <span class="badge-full">FLEX</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="produto" data-categoria="cozinha">
+                <div class="card-produto">
+                    <a href="https://www.mercadolivre.com.br/cacarola-com-tampa-brinox-topazio-20cm-23l-cinza/p/MLB54151735?pdp_filters=item_id%3AMLB6086850806#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6086850806"
+                        class="link-total-card">
+                        <div class="card-img">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_745464-MLA90890469338_082025-F.webp"
+                                alt="Caçarola Com Tampa">
+                        </div>
+
+                        <div class="card-info">
+                            <h3 class="titulo-produto">
+                                Caçarola Com Tampa Brinox Topázio 20cm 2,3l Cinza
+                            </h3>
+
+                            <p class="preco">R$ 95</p>
+
+                            <p class="parcelamento">
+                                em <strong>12x 9,36</strong>
+                            </p>
+
+                            <span class="cupom">10% OFF Levando 4 unidades</span>
+
+                            <p class="frete">
+                                Frete grátis <span>em compras acima de R$79,00</span>
+                            </p>
+                            <span class="badge-full">FLEX</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="produto" data-categoria="cozinha">
+                <div class="card-produto">
+                    <a href="https://www.mercadolivre.com.br/panela-de-pressao-ceramic-life-vapt-45l-verde-brinox/up/MLBU3635006956?pdp_filters=item_id%3AMLB4329290539#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4329290539"
+                        class="link-total-card">
+                        <div class="card-img">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_951409-MLB99149156304_112025-F.webp"
+                                alt="Panela Verde">
+                        </div>
+
+                        <div class="card-info">
+                            <h3 class="titulo-produto">
+                                Panela De Pressão Ceramic Life Vapt 4,5l Verde Brinox
+                            </h3>
+
+                            <p class="preco">R$ 299</p>
+
+                            <p class="parcelamento">
+                                em <strong>6x 49,83</strong>
+                            </p>
+
+                            <span class="cupom">10% OFF levando 4 unidades</span>
+
+                            <p class="frete">
+                                Frete grátis <span>em compras acima de R$79,00</span>
+                            </p>
+                            <span class="badge-full">FLEX</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="produto" data-categoria="cozinha">
+                <div class="card-produto">
+                    <a href="https://www.mercadolivre.com.br/pipoqueira-pic-poc-42l-graphite-facil-e-rapida-brinox/up/MLBU3695880750?pdp_filters=item_id%3AMLB4379562909#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4379562909"
+                        class="link-total-card">
+                        <div class="card-img">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_855791-MLB101674190346_122025-F.webp"
+                                alt="Pipoqueira">
+                        </div>
+
+                        <div class="card-info">
+                            <h3 class="titulo-produto">
+                                Pipoqueira Pic Poc 4,2l Graphite Fácil E Rápida Brinox Graphite
+                            </h3>
+
+                            <p class="preco">R$ 153</p>
+
+                            <p class="parcelamento">
+                                em <strong>12x 15,12</strong>
+                            </p>
+
+                            <span class="cupom">10% OFF levando 4 unidades</span>
+
+                            <p class="frete">
+                                Frete grátis <span>em compras acima de R$79,00</span>
+                            </p>
+                            <span class="badge-full">FLEX</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="diferenciais">
+        <div class="container diferenciais-grid">
+
+            <div class="diferencial-item">
+                <div class="icon">🚚</div>
+                <h4>ENVIO RÁPIDO</h4>
+                <p>Nossa equipe se esforça para atendê-lo com entrega rápida de todos os produtos.</p>
+            </div>
+
+            <div class="diferencial-item">
+                <div class="icon">🏷️</div>
+                <h4>OS MELHORES PREÇOS</h4>
+                <p>Oferecemos os menores preços possíveis em milhares de produtos selecionados.</p>
+            </div>
+
+            <div class="diferencial-item">
+                <div class="icon">🛡️</div>
+                <h4>COMPRAS 100% SEGURAS</h4>
+                <p>A segurança é essencial para que você tenha uma experiência de compra rápida e fácil.</p>
+            </div>
+
+            <div class="diferencial-item">
+                <div class="icon">🎧</div>
+                <h4>ATENDIMENTO DEDICADO</h4>
+                <p>Entre em contato a qualquer momento e forneceremos um atendimento rápido e confiável.</p>
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre container">
+        <h2>Sobre Nós</h2>
+        <p>
+            A Trio nasceu com o propósito de ser a sua solução em um só lugar. Somos uma loja virtual focada em
+            curadoria, selecionando produtos diferenciados que trazem praticidade e eficiência para diferentes momentos
+            da sua rotina — seja na cozinha, nos cuidados pessoais ou na execução de projetos especializados.
+
+            Trabalhamos com o conceito de "Tudo pra Todos", oferecendo desde tecnologia para gastronomia e beleza até
+            soluções técnicas para construção civil. Nosso foco não é apenas vender marcas, mas entregar itens que
+            facilitem a sua vida com o melhor custo-benefício do mercado.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 TrioEcommerce — Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function alternarProdutos() {
+            // Pega a seção de produtos pelo ID que colocamos nela
+            const secao = document.getElementById("secao-produtos");
+
+            // Verifica se ela já está visível
+            if (secao.classList.contains("produtos-visiveis")) {
+                secao.classList.remove("produtos-visiveis");
+                secao.classList.add("produtos-ocultos");
+            } else {
+                // Se estiver escondida, mostra
+                secao.classList.remove("produtos-ocultos");
+                secao.classList.add("produtos-visiveis");
+
+                // Faz a tela descer suavemente até o produto
+                secao.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>
