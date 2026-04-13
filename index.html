@@ -4,201 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRIO Ecommerce | Eletrodomésticos, Utensílios de Cozinha e Beleza</title>
+    <title>MHO E-Commerce</title>
 
-<meta name="description" content="Compre eletrodomésticos de cozinha, utensílios práticos e produtos de beleza como secadores de cabelo. Qualidade, preço justo e entrega rápida na TRIO Ecommerce.">
-
-    <!-- LINK DO CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/WpMKLJw9/Logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../img/logoMHO_semfundo.png" type="image/png">
 </head>
 
 <body>
 
     <script>
-        function mostrarEmail(elemento) {
-            const email = "contato@trioecommerce.com.br";
+        document.addEventListener("DOMContentLoaded", function () {
+            const botao = document.getElementById("contatoBtn");
+            const box = document.getElementById("emailBox");
 
-            // 1. Troca o texto para o e-mail
-            elemento.innerHTML = email;
+            botao.addEventListener("click", function (e) {
+                e.stopPropagation();
+                box.classList.toggle("active");
+            });
 
-            // 2. Transforma o link em um link de envio de e-mail
-            elemento.href = "mailto:" + email;
-
-            // 3. Estética
-            elemento.style.color = "#e2e600";
-            elemento.style.fontWeight = "bold";
-
-            // Remove o atributo onclick para que o link funcione normalmente no segundo clique
-            elemento.removeAttribute("onclick");
-        }
+            document.addEventListener("click", function () {
+                box.classList.remove("active");
+            });
+        });
     </script>
 
-    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <img src="https://i.ibb.co/ZRdNqPVv/Inserir-um-pouquinho-de-texto-1-removebg-preview.png"
-                    alt="TRIO Ecommerce Logo" class="logo-img">
+                <img src="../img/logoMHO_semfundo.png" alt="TRIO Ecommerce Logo" class="logo-img">
             </a>
 
             <nav class="nav-menu">
-                <a href="categoria.html">Categoria</a>
-                <a href="#sobre">Sobre</a>
-                <a href="javascript:void(0)" onclick="mostrarEmail(this)"
-                    style="display: inline-block; max-width: 100%; word-break: break-all;">Contato</a>
+                <a href="https://www.mercadolivre.com.br/pagina/it20250922110219#from=share_eshop" class="nav-item">
+                    <img src="../img/loja.png" class="nav-icon">
+                </a>
+
+                <div class="nav-item contato-box" id="contatoBtn">
+                    <img src="../img/contato.png" class="nav-icon">
+
+                    <div id="emailBox" class="email-box">
+                        <a href="mailto:contato@trioecommerce.com.br">
+                            contato@trioecommerce.com.br
+                        </a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content">
+    <section class="categoria-container">
+
+        <h1>MHO E-Commerce</h1>
+        <p class="subtitulo">Tipo de produtos</p>
+
+        <div class="filtros">
+            <button class="filtro-btn ativo" data-categoria="beleza">Beleza</button>
+            <button class="filtro-btn" data-categoria="cozinha">Cozinha</button>
+            <button class="filtro-btn" data-categoria="construcao">Construção</button>
         </div>
     </section>
 
-    <section class="prudut">
-        <a href="https://www.mercadolivre.com.br/pagina/trio_ecommerce" class="btn btn-primary">Ver Produtos</a>
-    </section>
-    <br>
-    <div class="anuncio-campanha">
-        <a href="javascript:void(0)" onclick="alternarProdutos()">
-            <img src="https://i.ibb.co/3mTCHX25/Captura-de-tela-2026-01-16-144954.png" alt="Campanha Cozinha"
-                class="img-anuncio">
-        </a>
+    <div class="header-produtos">
+        <h2>Produtos</h2>
     </div>
 
-    <section id="secao-produtos" class="produtos-ocultos">
-        <h2>Promoção</h2>
+    <div class="produtos">
 
-        <div class="produtos">
+        <div class="produto" data-categoria="beleza">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/escova-secadora-cadence-4-em-1-bocal-secador-esc800-preto-e-rosa/p/MLB31886565?pdp_filters=item_id%3AMLB4558143499&matt_tool=38524122#origin=share&sid=share&wid=MLB4558143499&action=copy"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="../img/TR-010014.webp" alt="Escova Secadora Cadence">
+                    </div>
 
-            <div class="produto" data-categoria="cozinha">
-                <div class="card-produto">
-                    <a href="https://www.mercadolivre.com.br/fervedor-125-l-revestimento-pro-flon-antiaderente-cinza/p/MLB38995247?pdp_filters=item_id%3AMLB6086837532#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6086837532"
-                        class="link-total-card">
-                        <div class="card-img">
-                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_806040-MLA99614359898_122025-F.webp"
-                                alt="Fervedor">
-                        </div>
-                        <div class="card-info">
-                            <h3 class="titulo-produto">
-                                Fervedor 1,25 L Revestimento Pro-flon Antiaderente Cinza
-                            </h3>
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Escova Secadora Cadence 4 Em 1 Bocal Secador Esc800 Preto E Rosa
+                        </h3>
 
-                            <p class="preco">R$ 51,04</p>
+                        <p class="preco-antigo">R$ 125,20</p>
 
-                            <span class="cupom">10% OFF Levando 4 unidades</span>
+                        <p class="preco">R$ 101,00</p>
 
-                            <p class="frete">
-                                Frete grátis <span>em compras acima de R$79,00</span>
-                            </p>
-                            <span class="badge-full">FLEX</span>
-                        </div>
-                    </a>
-                </div>
+                        <p class="parcelamento">
+                            em <strong>12x 9,98</strong>
+                        </p>
+
+                        <span class="cupom">19% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
             </div>
-
-            <div class="produto" data-categoria="cozinha">
-                <div class="card-produto">
-                    <a href="https://www.mercadolivre.com.br/cacarola-com-tampa-brinox-topazio-20cm-23l-cinza/p/MLB54151735?pdp_filters=item_id%3AMLB6086850806#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6086850806"
-                        class="link-total-card">
-                        <div class="card-img">
-                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_745464-MLA90890469338_082025-F.webp"
-                                alt="Caçarola Com Tampa">
-                        </div>
-
-                        <div class="card-info">
-                            <h3 class="titulo-produto">
-                                Caçarola Com Tampa Brinox Topázio 20cm 2,3l Cinza
-                            </h3>
-
-                            <p class="preco">R$ 95</p>
-
-                            <p class="parcelamento">
-                                em <strong>12x 9,36</strong>
-                            </p>
-
-                            <span class="cupom">10% OFF Levando 4 unidades</span>
-
-                            <p class="frete">
-                                Frete grátis <span>em compras acima de R$79,00</span>
-                            </p>
-                            <span class="badge-full">FLEX</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="produto" data-categoria="cozinha">
-                <div class="card-produto">
-                    <a href="https://www.mercadolivre.com.br/panela-de-pressao-ceramic-life-vapt-45l-verde-brinox/up/MLBU3635006956?pdp_filters=item_id%3AMLB4329290539#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4329290539"
-                        class="link-total-card">
-                        <div class="card-img">
-                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_951409-MLB99149156304_112025-F.webp"
-                                alt="Panela Verde">
-                        </div>
-
-                        <div class="card-info">
-                            <h3 class="titulo-produto">
-                                Panela De Pressão Ceramic Life Vapt 4,5l Verde Brinox
-                            </h3>
-
-                            <p class="preco">R$ 299</p>
-
-                            <p class="parcelamento">
-                                em <strong>6x 49,83</strong>
-                            </p>
-
-                            <span class="cupom">10% OFF levando 4 unidades</span>
-
-                            <p class="frete">
-                                Frete grátis <span>em compras acima de R$79,00</span>
-                            </p>
-                            <span class="badge-full">FLEX</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="produto" data-categoria="cozinha">
-                <div class="card-produto">
-                    <a href="https://www.mercadolivre.com.br/pipoqueira-pic-poc-42l-graphite-facil-e-rapida-brinox/up/MLBU3695880750?pdp_filters=item_id%3AMLB4379562909#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4379562909"
-                        class="link-total-card">
-                        <div class="card-img">
-                            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_855791-MLB101674190346_122025-F.webp"
-                                alt="Pipoqueira">
-                        </div>
-
-                        <div class="card-info">
-                            <h3 class="titulo-produto">
-                                Pipoqueira Pic Poc 4,2l Graphite Fácil E Rápida Brinox Graphite
-                            </h3>
-
-                            <p class="preco">R$ 153</p>
-
-                            <p class="parcelamento">
-                                em <strong>12x 15,12</strong>
-                            </p>
-
-                            <span class="cupom">10% OFF levando 4 unidades</span>
-
-                            <p class="frete">
-                                Frete grátis <span>em compras acima de R$79,00</span>
-                            </p>
-                            <span class="badge-full">FLEX</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
         </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/panela-de-presso-cermic-life-vapt-20cm-45l-vanilla-brinox/p/MLB37589614?pdp_filters=item_id%3AMLB4533990779&matt_tool=38524122#origin=share&sid=share&wid=MLB4533990779&action=copy"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="../img/TR-01001.webp" alt="Panela Vanilla">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Panela De Pressão Cerâmic Life Vapt 20cm 4,5l Vanilla Brinox
+                        </h3>
+
+                        <p class="preco-antigo">R$ 157,00</p>
+
+                        <p class="preco">R$ 149,15</p>
+
+                        <span class="cupom">5% OFF no PIX</span>
+
+                        <p class="parcelamento">
+                            em <strong>5x 31,40</strong>
+                        </p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto-vegetal-pronto-uso-sogia/p/MLB2054922001?pdp_filters=item_id%3AMLB4288242755#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4288242755"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_860557-MLB96770738928_112025-F.webp"
+                            alt="Desmoldante">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto Vegetal Pronto Uso - Sogia
+                        </h3>
+
+                        <p class="preco">R$ 46,38</p>
+
+                        <span class="cupom">30% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto/p/MLB2059635418?pdp_filters=item_id%3AMLB6159823710#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6159823710"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_746224-MLB96759619012_112025-F.webp"
+                            alt="Desmoldante Para Concreto">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto
+                        </h3>
+
+                        <p class="preco">R$ 188,81</p>
+
+                        <p class="parcelamento">
+                            preço por litro: R$ 18,88
+                        </p>
+
+                        <span class="cupom">7% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
     </section>
+
+    <script>
+        const botoes = document.querySelectorAll('.filtro-btn');
+        const produtos = document.querySelectorAll('.produto');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                // Remove ativo de todos
+                botoes.forEach(b => b.classList.remove('ativo'));
+                botao.classList.add('ativo');
+
+                const categoria = botao.dataset.categoria;
+
+                produtos.forEach(produto => {
+                    if (produto.dataset.categoria === categoria) {
+                        produto.classList.remove('hidden');
+                    } else {
+                        produto.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
 
     <section class="diferenciais">
         <div class="container diferenciais-grid">
@@ -244,36 +266,9 @@
         </p>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <p>© 2026 TrioEcommerce — Todos os direitos reservados</p>
     </footer>
-
-    <script>
-        function alternarProdutos() {
-            // Pega a seção de produtos pelo ID que colocamos nela
-            const secao = document.getElementById("secao-produtos");
-
-            // Verifica se ela já está visível
-            if (secao.classList.contains("produtos-visiveis")) {
-                secao.classList.remove("produtos-visiveis");
-                secao.classList.add("produtos-ocultos");
-            } else {
-                // Se estiver escondida, mostra
-                secao.classList.remove("produtos-ocultos");
-                secao.classList.add("produtos-visiveis");
-
-                // Faz a tela descer suavemente até o produto
-                secao.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    </script>
 </body>
 
 </html>
-
-</body>
-
-
-</html>
-
