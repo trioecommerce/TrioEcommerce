@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHO E-Commerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../img/logoMHO_semfundo.png" type="image/png">
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botao = document.getElementById("contatoBtn");
+            const box = document.getElementById("emailBox");
+
+            botao.addEventListener("click", function (e) {
+                e.stopPropagation();
+                box.classList.toggle("active");
+            });
+
+            document.addEventListener("click", function () {
+                box.classList.remove("active");
+            });
+        });
+    </script>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="../img/logoMHO_semfundo.png" alt="TRIO Ecommerce Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="https://www.mercadolivre.com.br/pagina/it20250922110219#from=share_eshop" class="nav-item">
+                    <img src="../img/loja.png" class="nav-icon">
+                </a>
+
+                <div class="nav-item contato-box" id="contatoBtn">
+                    <img src="../img/contato.png" class="nav-icon">
+
+                    <div id="emailBox" class="email-box">
+                        <a href="mailto:contato@trioecommerce.com.br">
+                            contato@trioecommerce.com.br
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="categoria-container">
+
+        <h1>MHO E-Commerce</h1>
+        <p class="subtitulo">Tipo de produtos</p>
+
+        <div class="filtros">
+            <button class="filtro-btn ativo" data-categoria="beleza">Beleza</button>
+            <button class="filtro-btn" data-categoria="cozinha">Cozinha</button>
+            <button class="filtro-btn" data-categoria="construcao">Construção</button>
+        </div>
+    </section>
+
+    <div class="header-produtos">
+        <h2>Produtos</h2>
+    </div>
+
+    <div class="produtos">
+
+        <div class="produto" data-categoria="beleza">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/escova-secadora-cadence-4-em-1-bocal-secador-esc800-preto-e-rosa/p/MLB31886565?pdp_filters=item_id%3AMLB4558143499&matt_tool=38524122#origin=share&sid=share&wid=MLB4558143499&action=copy"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="../img/TR-010014.webp" alt="Escova Secadora Cadence">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Escova Secadora Cadence 4 Em 1 Bocal Secador Esc800 Preto E Rosa
+                        </h3>
+
+                        <p class="preco-antigo">R$ 125,20</p>
+
+                        <p class="preco">R$ 101,00</p>
+
+                        <p class="parcelamento">
+                            em <strong>12x 9,98</strong>
+                        </p>
+
+                        <span class="cupom">19% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="cozinha">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/panela-de-presso-cermic-life-vapt-20cm-45l-vanilla-brinox/p/MLB37589614?pdp_filters=item_id%3AMLB4533990779&matt_tool=38524122#origin=share&sid=share&wid=MLB4533990779&action=copy"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="../img/TR-01001.webp" alt="Panela Vanilla">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Panela De Pressão Cerâmic Life Vapt 20cm 4,5l Vanilla Brinox
+                        </h3>
+
+                        <p class="preco-antigo">R$ 157,00</p>
+
+                        <p class="preco">R$ 149,15</p>
+
+                        <span class="cupom">5% OFF no PIX</span>
+
+                        <p class="parcelamento">
+                            em <strong>5x 31,40</strong>
+                        </p>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto-vegetal-pronto-uso-sogia/p/MLB2054922001?pdp_filters=item_id%3AMLB4288242755#origin%3Dshare%26sid%3Dshare%26wid%3DMLB4288242755"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_860557-MLB96770738928_112025-F.webp"
+                            alt="Desmoldante">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto Vegetal Pronto Uso - Sogia
+                        </h3>
+
+                        <p class="preco">R$ 46,38</p>
+
+                        <span class="cupom">30% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="produto hidden" data-categoria="construcao">
+            <div class="card-produto">
+                <a href="https://www.mercadolivre.com.br/desmoldante-para-concreto/p/MLB2059635418?pdp_filters=item_id%3AMLB6159823710#origin%3Dshare%26sid%3Dshare%26wid%3DMLB6159823710"
+                    class="link-total-card">
+                    <div class="card-img">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_746224-MLB96759619012_112025-F.webp"
+                            alt="Desmoldante Para Concreto">
+                    </div>
+
+                    <div class="card-info">
+                        <h3 class="titulo-produto">
+                            Desmoldante Para Concreto
+                        </h3>
+
+                        <p class="preco">R$ 188,81</p>
+
+                        <p class="parcelamento">
+                            preço por litro: R$ 18,88
+                        </p>
+
+                        <span class="cupom">7% OFF</span>
+
+                        <p class="frete">
+                            Frete grátis <span>em compras acima de R$79,00</span>
+                        </p>
+                        <span class="badge-full">FLEX</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <script>
+        const botoes = document.querySelectorAll('.filtro-btn');
+        const produtos = document.querySelectorAll('.produto');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                // Remove ativo de todos
+                botoes.forEach(b => b.classList.remove('ativo'));
+                botao.classList.add('ativo');
+
+                const categoria = botao.dataset.categoria;
+
+                produtos.forEach(produto => {
+                    if (produto.dataset.categoria === categoria) {
+                        produto.classList.remove('hidden');
+                    } else {
+                        produto.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <section class="diferenciais">
+        <div class="container diferenciais-grid">
+
+            <div class="diferencial-item">
+                <div class="icon">🚚</div>
+                <h4>ENVIO RÁPIDO</h4>
+                <p>Nossa equipe se esforça para atendê-lo com entrega rápida de todos os produtos.</p>
+            </div>
+
+            <div class="diferencial-item">
+                <div class="icon">🏷️</div>
+                <h4>OS MELHORES PREÇOS</h4>
+                <p>Oferecemos os menores preços possíveis em milhares de produtos selecionados.</p>
+            </div>
+
+            <div class="diferencial-item">
+                <div class="icon">🛡️</div>
+                <h4>COMPRAS 100% SEGURAS</h4>
+                <p>A segurança é essencial para que você tenha uma experiência de compra rápida e fácil.</p>
+            </div>
+
+            <div class="diferencial-item">
+                <div class="icon">🎧</div>
+                <h4>ATENDIMENTO DEDICADO</h4>
+                <p>Entre em contato a qualquer momento e forneceremos um atendimento rápido e confiável.</p>
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre container">
+        <h2>Sobre Nós</h2>
+        <p>
+            A Trio nasceu com o propósito de ser a sua solução em um só lugar. Somos uma loja virtual focada em
+            curadoria, selecionando produtos diferenciados que trazem praticidade e eficiência para diferentes momentos
+            da sua rotina — seja na cozinha, nos cuidados pessoais ou na execução de projetos especializados.
+
+            Trabalhamos com o conceito de "Tudo pra Todos", oferecendo desde tecnologia para gastronomia e beleza até
+            soluções técnicas para construção civil. Nosso foco não é apenas vender marcas, mas entregar itens que
+            facilitem a sua vida com o melhor custo-benefício do mercado.
+        </p>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 TrioEcommerce — Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>
