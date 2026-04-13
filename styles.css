@@ -11,13 +11,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #222;
     line-height: 1.6;
-    background-color: #fafc90; /* cinza claro marketplace */
+    background-color: #fcfcfc;
+    /* cinza claro marketplace */
 }
 
 .logo-img {
-  max-width: 160px;
-  height: auto;
-  display: block;
+    max-width: 100px;
+    height: auto;
+    display: block;
 }
 
 .container {
@@ -31,39 +32,66 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px; /* Definimos que ela tem 80px de altura */
+    height: 90px;
+    /* Definimos que ela tem 80px de altura */
     z-index: 1000;
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.95); /* Branco com 95% de opacidade */
-    backdrop-filter: blur(5px); /* Efeito de vidro fosco moderno */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Branco com 95% de opacidade */
+    backdrop-filter: blur(5px);
+    /* Efeito de vidro fosco moderno */
 }
 
 .nav-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Logo na esquerda, Menu na direita */
+    justify-content: space-between;
+    /* Logo na esquerda, Menu na direita */
     align-items: center;
     padding: 0 20px;
 }
 
-.logo-img {
-    height: 50px; /* Ajuste conforme necessário */
-    width: auto;
-    display: block;
+.nav-menu {
+    display: flex;
+    gap: 20px;
 }
 
-.logo-img {
-    height: 90px; 
-    width: auto;  
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    /* coloca o ícone em cima */
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-icon {
+    width: 40px;
+    transition: transform 0.2s;
+}
+
+.nav-item:hover .nav-icon {
+    transform: scale(1.15);
+}
+
+
+
+.logo {
+    height: 80px;
+    /* Ajuste conforme necessário */
+    width: auto;
     display: block;
 }
 
 /* Ajuste para o menu não amontoar no celular */
 @media (max-width: 768px) {
-    .nav-content { flex-direction: column; gap: 10px; }
-    .logo-img { height: 60px; }
+
+    .logo-img {
+        height: 80px;
+    }
 }
 
 .nav-menu a {
@@ -77,11 +105,13 @@ body {
     background-color: #000;
     color: #e2e600 !important;
     padding: 5px 10px;
-    border-radius: 8px; /* Mantendo o padrão de pontas redondas que você gosta */
+    border-radius: 8px;
+    /* Mantendo o padrão de pontas redondas que você gosta */
 }
 
 .nav-menu a:hover {
-    color: #e2e600; /* Cor amarela da sua logo */
+    color: #e2e600;
+    /* Cor amarela da sua logo */
 }
 
 /* Linha decorativa que aparece embaixo ao passar o mouse */
@@ -112,32 +142,37 @@ body {
     background-image: url("https://i.ibb.co/KjM6FvXH/Trio.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; /* 🔥 NÃO CORTA A IMAGEM */
+    background-size: contain;
+    /* 🔥 NÃO CORTA A IMAGEM */
     margin-top: -20px;
-    
+
     width: 100%;
-    min-height: 450px; /* ajuste conforme sua imagem */
-    
+    min-height: 450px;
+    /* ajuste conforme sua imagem */
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
 
     padding-bottom: 50px;
-    
+
 }
 
 /* BOTÃO - Centralizado e sem 'quebrar' o fundo */
 .btn-primary {
     background: #ff6600 !important;
     color: #fff !important;
-    
-    /* Centralização Real */
-    display: block !important;    /* Ocupa a linha toda para permitir o 'auto' */
-    width: fit-content;           /* Mas mantém o tamanho apenas do texto */
-    margin: 40px auto 0 auto !important; /* Centraliza horizontalmente e dá espaço em cima */
 
-    padding: 20px 50px !important; 
+    /* Centralização Real */
+    display: block !important;
+    /* Ocupa a linha toda para permitir o 'auto' */
+    width: fit-content;
+    /* Mas mantém o tamanho apenas do texto */
+    margin: 40px auto 0 auto !important;
+    /* Centraliza horizontalmente e dá espaço em cima */
+
+    padding: 20px 50px !important;
     font-size: 22px !important;
     border-radius: 8px !important;
     text-decoration: none;
@@ -150,26 +185,31 @@ body {
 }
 
 /* GRID DE PRODUTOS (UNIFICADO E RESPONSIVO) */
-.cards, .produtos {
+.cards,
+.produtos {
     display: grid;
     /* No PC: 4 colunas. No Celular: Ajusta sozinho */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin: 20px auto; /* O 'auto' centraliza o grid na página */
+    margin: 20px auto;
+    /* O 'auto' centraliza o grid na página */
     width: 90%;
     max-width: 1200px;
-    justify-content: center; /* Centraliza os cards internamente */
+    justify-content: center;
+    /* Centraliza os cards internamente */
 }
 
 /* Centraliza o título da seção de produtos */
-.header-produtos, h2.header-produtos {
+.header-produtos,
+h2.header-produtos {
     text-align: center;
     width: 100%;
     margin: 30px 0 20px 0;
 }
 
 /* CARD PRODUTO */
-.card-produto, .produto {
+.card-produto,
+.produto {
     background: #ffffff;
     border-radius: 10px;
     padding: 15px;
@@ -178,13 +218,15 @@ body {
     flex-direction: column;
     height: 100%;
     transition: 0.3s ease;
-    text-decoration: none !important; /* Remove linha de link */
+    text-decoration: none !important;
+    /* Remove linha de link */
     color: inherit !important;
 }
 
-.card-produto:hover, .produto:hover {
+.card-produto:hover,
+.produto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .card-img {
@@ -242,7 +284,8 @@ body {
 
 .frete {
     font-size: 0.8rem;
-    color: #00a650; /* Verde Mercado Livre */
+    color: #00a650;
+    /* Verde Mercado Livre */
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -274,10 +317,12 @@ body {
 /* --- ADICIONADO PARA CATEGORIAS --- */
 .categoria {
     width: 100%;
-    background-size: 100% auto; /* Faz a imagem ocupar toda a largura sem esticar */
+    background-size: 100% auto;
+    /* Faz a imagem ocupar toda a largura sem esticar */
     background-repeat: no-repeat;
     background-position: top center;
-    min-height: 400px; /* Ajuste para aparecer o botão 'Ver Produtos' */
+    min-height: 400px;
+    /* Ajuste para aparecer o botão 'Ver Produtos' */
 }
 
 .produtos {
@@ -339,11 +384,12 @@ body {
 .hidden {
     display: none !important;
 }
+
 /* ---------------------------------- */
 
 /* SEÇÃO DIFERENCIAIS */
 .diferenciais {
-    background-color: #fafc90;
+    background-color: #fcfcfc;
     padding: 60px 50px;
 }
 
@@ -355,12 +401,17 @@ body {
     text-align: center;
 }
 
-.diferencial-item { 
-    padding: 20px; 
-    background-color: #ffffff;
+.diferencial-item {
+    padding: 20px;
+    background-color: #dfdfdd;
     border-radius: 50px
 }
-.diferencial-item .icon { font-size: 40px; margin-bottom: 15px; }
+
+.diferencial-item .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
 .diferencial-item h4 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -368,6 +419,7 @@ body {
     color: #222;
     text-transform: uppercase;
 }
+
 .diferencial-item p {
     font-size: 0.9rem;
     color: #555;
@@ -394,9 +446,12 @@ body {
 }
 
 .sobre {
-    padding: 80px 0; /* Aumentei um pouco o respiro vertical */
-    text-align: center; /* Centraliza o título e o texto */
-    background-color: #ffffff; /* Mantém o padrão do site */
+    padding: 80px 0;
+    /* Aumentei um pouco o respiro vertical */
+    text-align: center;
+    /* Centraliza o título e o texto */
+    background-color: #dfdfdd;
+    /* Mantém o padrão do site */
     border-radius: 50px
 }
 
@@ -407,11 +462,14 @@ body {
 }
 
 .sobre p {
-    max-width: 800px; /* Limita a largura para o texto não ficar gigante em monitores largos */
-    margin: 0 auto; /* Centraliza o bloco de texto na página */
+    max-width: 800px;
+    /* Limita a largura para o texto não ficar gigante em monitores largos */
+    margin: 0 auto;
+    /* Centraliza o bloco de texto na página */
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #444; /* Um tom levemente mais suave para leitura */
+    color: #444;
+    /* Um tom levemente mais suave para leitura */
 }
 
 /* Ajuste para Celular */
@@ -419,9 +477,10 @@ body {
     .sobre {
         padding: 40px 0;
     }
-    
+
     .sobre p {
-        width: 90%; /* Garante margem nas laterais no celular */
+        width: 90%;
+        /* Garante margem nas laterais no celular */
         font-size: 1rem;
     }
 }
@@ -429,29 +488,28 @@ body {
 @media (max-width: 768px) {
 
     .hero {
-        min-height: 160px;      /* diminui a altura do banner */
-        padding-bottom: 15px;   /* remove o “respiro” excessivo */
+        min-height: 160px;
+        /* diminui a altura do banner */
+        padding-bottom: 15px;
+        /* remove o “respiro” excessivo */
     }
 
     .btn-primary {
-        margin-top: 15px !important; /* aproxima o botão do banner */
+        margin-top: 15px !important;
+        /* aproxima o botão do banner */
         padding: 14px 32px !important;
         font-size: 18px !important;
     }
 }
 
 .categoria-container {
-    /* COLE O LINK DA IMAGEM ABAIXO */
-    background-image: url('https://i.ibb.co/PzxbQnN4/Banner-para-site-moderno-de-compra-online-e-segura-azul-e-branco-4.png');
-    
-    /* Configurações para a imagem ficar perfeita */
-    background-size: cover;           /* Faz a imagem cobrir todo o espaço */
-    background-position: center;      /* Centraliza a imagem */
-    background-repeat: no-repeat;     /* Impede que a imagem se repita */
-    
+
+    background-color: #f8ff9a;
+
     /* Espaçamento interno para o conteúdo não grudar nas bordas */
     padding: 60px 20px;
-    color: rgb(0, 0, 0);                     /* Altera a cor do texto para ler melhor sobre o fundo */
+    color: rgb(0, 0, 0);
+    /* Altera a cor do texto para ler melhor sobre o fundo */
 }
 
 /* Faz a rolagem ser suave em todo o site */
@@ -462,10 +520,12 @@ html {
 /* Garante que o anúncio fique bonito e clicável */
 .img-anuncio {
     width: 100%;
-    max-width: 1200px; /* Ou o tamanho do seu container */
+    max-width: 1200px;
+    /* Ou o tamanho do seu container */
     display: block;
     margin: 20px auto;
-    border-radius: 15px; /* Mantendo as pontas redondas que você gosta */
+    border-radius: 15px;
+    /* Mantendo as pontas redondas que você gosta */
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -479,7 +539,8 @@ html {
 /* Ajuste para a Navbar Fixa */
 /* Como sua navbar é fixa, precisamos de um respiro para o título não ficar escondido atrás dela */
 #secao-produtos {
-    scroll-margin-top: 100px; /* Ajuste conforme a altura da sua navbar branca */
+    scroll-margin-top: 100px;
+    /* Ajuste conforme a altura da sua navbar branca */
 }
 
 /* Estado inicial: Escondido */
@@ -490,20 +551,78 @@ html {
 /* Estado ativo: Mostra a seção */
 .produtos-visiveis {
     display: block !important;
-    animation: surgir 0.5s ease; /* Efeito suave ao aparecer */
+    animation: surgir 0.5s ease;
+    /* Efeito suave ao aparecer */
 }
 
 /* Efeito de animação */
 @keyframes surgir {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #secao-produtos h2 {
-    text-align: center;      /* Centraliza o texto no meio */
-    font-size: 28px;         /* Tamanho da fonte (ajuste se preferir) */
-    color: #333;             /* Cor cinza escuro profissional */
-    margin: 30px 0;          /* 30px de espaço em cima e embaixo */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mesma fonte da navbar */
-    font-weight: 700;        /* Deixa o negrito mais forte */
+    text-align: center;
+    /* Centraliza o texto no meio */
+    font-size: 28px;
+    /* Tamanho da fonte (ajuste se preferir) */
+    color: #333;
+    /* Cor cinza escuro profissional */
+    margin: 30px 0;
+    /* 30px de espaço em cima e embaixo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Mesma fonte da navbar */
+    font-weight: 700;
+    /* Deixa o negrito mais forte */
+}
+
+.contato-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.email-box {
+    position: absolute;
+    top: 60px;
+    right: 0; /* 👈 cola no lado direito do ícone */
+
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    font-size: 12px;
+    white-space: nowrap; /* mantém em uma linha */
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+
+    z-index: 9999;
+}
+
+.email-box.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.email-box a {
+    color: #e2e600;
+    text-decoration: none;
+
+    word-break: break-all; /* 👈 quebra o email corretamente */
+}
+
+.preco-antigo {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through; /* 👈 risco */
+    margin-bottom: 2px;
 }
